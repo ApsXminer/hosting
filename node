@@ -3,17 +3,15 @@
 # ASCII Art
 ascii_art="
 
-
  _   _       _      ___             __   _______ 
 | \ | |     | |    / _ \            \ \ / /  _  \\
 |  \| | ___ | |_  / /_\ \_ __  ___   \ V /| | | |
-| . \` |/ _ \| __| |  _  | '_ \/ __|  /   \| | | |
+| .\` |/ _ \| __| |  _  | '_ \/ __|  /   \| | | |
 | |\  | (_) | |_  | | | | |_) \__ \ / /^\ \ |/ / 
 \_| \_/\___/ \__| \_| |_/ .__/|___/ \/   \/___/  
                         | |                      
                         |_|                      
 
-                 Not Aps XD
 "
 
 # Colors
@@ -24,10 +22,9 @@ CYAN='\033[0;36m'
 YELLOW='\033[0;33m'
 NC='\033[0m' # No Color
 
-# Clear screen
+# Clear the screen
 clear
-
-# Check if run as root
+# Check if the script is run as root
 if [ "$EUID" -ne 0 ]; then
   echo -e "${RED}Please run this script as root.${NC}"
   exit 1
@@ -35,21 +32,22 @@ fi
 
 echo -e "${CYAN}$ascii_art${NC}"
 
-echo -e "${YELLOW}* Installing Dependencies${NC}"
+echo "* Installing Dependencies"
+
+# Update package list and install dependencies
 sudo apt update
-sudo apt install -y curl software-properties-common git
+sudo apt install -y curl software-properties-common
 curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
-sudo apt install -y nodejs
+sudo apt-get install nodejs -y 
+sudo apt install git -y
 
-echo -e "${GREEN}* Installed Dependencies${NC}"
-echo -e "${YELLOW}* Cloning Files${NC}"
+echo "* Installed Dependencies"
 
-git clone https://github.com/draco-labes/draco-daemon
-mv draco-daemon node
-cd node
-npm install
+echo "* Installing Files"
 
-echo -e "${YELLOW}* Paste your configuration before proceeding.${NC}"
-echo -e "${GREEN}* Starting the bot...${NC}"
+# Create directory, clone repository, and install files
+git clone https://github.com/draco-labes/draco-daemon && mv draco-daemon node && cd node && npm install && cd node
 
-node .
+echo "* paste your configure"
+
+echo "* node ."
