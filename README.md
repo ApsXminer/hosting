@@ -50,7 +50,7 @@ I believe that great code is both beautiful and functional. Whether I'm working 
 ## Let's Connect
 
 I'm always excited to chat about tech, collaboration, or new ideas.  
-Check out my [Discord Server]([https://discord.gg/5c9D3VD7se](https://discord.gg/zabhEsyEk7)) and subscribe to my [YouTube Channel](https://youtube.com/@not_aps_xd) for more updates and community discussions.
+Check out my [Discord Server]([https://discord.gg/5c9D3VD7se](https://discord.gg/zabhEsyEk7) and subscribe to my [YouTube Channel](https://youtube.com/@not_aps_xd) for more updates and community discussions.
 
 
 <div align="center">
