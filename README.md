@@ -1,7 +1,4 @@
 <!-- Banner Section (Replace URL with your own banner image if you have one) -->
-<div align="center">
-  <img src="https://images-ext-1.discordapp.net/external/kd2m6fK-HQ6-VFF-i7xFXdV5FAQ0YavUGwTFehWCdIo/%3Fsize%3D2048/https/cdn.discordapp.com/banners/1345485984153731102/a_cfb0b25533fcb308ef48ab6219075f5e.gif?width=768&height=432" alt="Banner Image" style="max-width:100%;">
-</div>
 
 # Hi, I'm ApsXminer 👋
 
@@ -53,7 +50,7 @@ I believe that great code is both beautiful and functional. Whether I'm working 
 ## Let's Connect
 
 I'm always excited to chat about tech, collaboration, or new ideas.  
-Check out my [Discord Server](https://discord.gg/5c9D3VD7se) and subscribe to my [YouTube Channel](https://youtube.com/@ApsXminerExploits) for more updates and community discussions.
+Check out my [Discord Server]([https://discord.gg/5c9D3VD7se](https://discord.gg/zabhEsyEk7)) and subscribe to my [YouTube Channel](https://youtube.com/@not_aps_xd) for more updates and community discussions.
 
 
 <div align="center">
