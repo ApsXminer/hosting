@@ -1,0 +1,57 @@
+#!/bin/bash
+
+clear
+echo -e "\e[1;36m"
+echo " ██████╗ ██████╗ ██████╗ ███████╗    ██╗  ██╗    ██╗   ██╗███████╗██████╗ ███████╗███████╗"
+echo "██╔════╝██╔═══██╗██╔══██╗██╔════╝    ╚██╗██╔╝    ██║   ██║██╔════╝██╔══██╗██╔════╝██╔════╝"
+echo "██║     ██║   ██║██║  ██║█████╗       ╚███╔╝     ██║   ██║█████╗  ██████╔╝███████╗█████╗  "
+echo "██║     ██║   ██║██║  ██║██╔══╝       ██╔██╗     ╚██╗ ██╔╝██╔══╝  ██╔══██╗╚════██║██╔══╝  "
+echo "╚██████╗╚██████╔╝██████╔╝███████╗    ██╔╝ ██╗     ╚████╔╝ ███████╗██║  ██║███████║███████╗"
+echo " ╚═════╝ ╚═════╝ ╚═════╝ ╚══════╝    ╚═╝  ╚═╝      ╚═══╝  ╚══════╝╚═╝  ╚═╝╚══════╝╚══════╝"
+echo -e "\e[0m"
+
+sleep 1
+echo -e "\n\e[1;32mWhat Do You Want To Install?\e[0m"
+sleep 0.5
+echo -e "\e[1;34m"
+echo "1) PANEL              2) NODE"
+echo -e "\e[0m"
+read -p "> " choice
+
+if [ "$choice" == "1" ]; then
+    clear
+    echo -e "\e[1;36m"
+    echo "Installing PANEL..."
+    echo -e "\e[0m"
+    sleep 1
+
+    git clone https://github.com/dragonlabsdev/v3panel
+    curl -sL https://deb.nodesource.com/setup_23.x | sudo bash -
+    apt-get install nodejs git -y
+    cd v3panel
+    apt install zip -y && unzip panel.zip && cd panel
+    npm install
+    npm run seed
+    npm run createUser
+    node .
+
+elif [ "$choice" == "2" ]; then
+    clear
+    echo -e "\e[1;35m"
+    echo "Installing NODE..."
+    echo -e "\e[0m"
+    sleep 1
+
+    git clone https://github.com/dragonlabsdev/daemon
+    cd daemon
+    apt install zip -y && unzip daemon.zip && cd daemon
+    npm install
+
+    echo -e "\n\e[1;33mPaste your configuration token below:\e[0m"
+    read -p "> " token
+    node .
+
+else
+    echo -e "\n\e[1;31mInvalid Option!\e[0m"
+    exit 1
+fi
